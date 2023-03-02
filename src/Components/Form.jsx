@@ -154,20 +154,32 @@ const Form = () => {
   return (
     <>
       <TableContainer
+        className="table"
         component={Paper}
-        sx={{ minWidth: 650, maxWidth: 1000, textAlign: "center" }}
+        sx={{ minWidth: 414, maxWidth: 1000, textAlign: "center" }}
       >
         {errorMsg ? <p className="error">{errorMsg}</p> : null}
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell sx={{ textAlign: "center", width: "33%" }}>
+              <TableCell
+                className="cell"
+                sx={{ textAlign: "center", width: "33%" }}
+              >
                 Currency/Current date
               </TableCell>
-              <TableCell sx={{ textAlign: "center" }} align="right">
+              <TableCell
+                className="cell"
+                sx={{ textAlign: "center", minWidth: "33%" }}
+                align="right"
+              >
                 Buy
               </TableCell>
-              <TableCell sx={{ textAlign: "center" }} align="right">
+              <TableCell
+                className="cell"
+                sx={{ textAlign: "center", width: "33%", minWidth: "33%" }}
+                align="right"
+              >
                 Sell
               </TableCell>
             </TableRow>
@@ -177,16 +189,25 @@ const Form = () => {
             <TableBody>
               <TableRow>
                 <TableCell
-                  sx={{ textAlign: "center" }}
+                  className="cell"
+                  sx={{ textAlign: "center", width: "33%" }}
                   component="th"
                   scope="row"
                 >
                   loading...
                 </TableCell>
-                <TableCell sx={{ textAlign: "center" }} align="right">
+                <TableCell
+                  className="cell"
+                  sx={{ textAlign: "center", width: "33%" }}
+                  align="right"
+                >
                   loading...
                 </TableCell>
-                <TableCell sx={{ textAlign: "center" }} align="right">
+                <TableCell
+                  className="cell"
+                  sx={{ textAlign: "center", width: "33%" }}
+                  align="right"
+                >
                   loading...
                 </TableCell>
               </TableRow>
@@ -197,16 +218,25 @@ const Form = () => {
                 <TableBody key={row.ccy}>
                   <TableRow>
                     <TableCell
-                      sx={{ textAlign: "center" }}
+                      className="cell"
+                      sx={{ textAlign: "center", width: "33%" }}
                       component="th"
                       scope="row"
                     >
                       {errorMsg ? "reload page" : row.ccy + "/" + row.base_ccy}
                     </TableCell>
-                    <TableCell sx={{ textAlign: "center" }} align="right">
+                    <TableCell
+                      className="cell"
+                      sx={{ textAlign: "center", minWidth: "33%" }}
+                      align="right"
+                    >
                       {errorMsg ? "reload page" : row.buy}
                     </TableCell>
-                    <TableCell sx={{ textAlign: "center" }} align="right">
+                    <TableCell
+                      className="cell"
+                      sx={{ textAlign: "center", minWidth: "33%" }}
+                      align="right"
+                    >
                       {errorMsg ? "reload page" : row.sale}
                     </TableCell>
                   </TableRow>
