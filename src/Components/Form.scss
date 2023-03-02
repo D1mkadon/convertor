@@ -1,0 +1,30 @@
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  gap: 0;
+}
+table {
+  border-collapse: collapse;
+}
+.divChanger {
+  display: flex;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+}
+.error {
+  border-color: red;
+  background-color: red;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.Icon:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+.Select:hover {
+  text-decoration: underline;
+}
